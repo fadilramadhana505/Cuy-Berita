@@ -1,0 +1,263 @@
+/* === Reset & Global === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 0 0 12px 12px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.title-text h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+/* === NAVIGATION === */
+nav {
+    background-color: #1e3a8a;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: block;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3b82f6;
+}
+
+/* === MAIN CONTENT === */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* === CONTENT / ARTICLES === */
+.content, .content-article {
+    flex: 3;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    padding: 15px;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-2px);
+}
+
+article .thumb img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+article h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+article p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #1e3a8a;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #3b82f6;
+}
+
+/* === SIDEBAR === */
+aside {
+    flex: 1;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+aside h3 {
+    color: #1e3a8a;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 8px 0;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+aside ul li a:hover {
+    color: #1e3a8a;
+}
+
+/* === FORM KONTAK === */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+form button.btn {
+    width: 100%;
+}
+
+/* === FOOTER MODERN === */
+footer {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 12px 12px 0 0;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fbbf24;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li, .footer-col p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #fbbf24;
+}
+
+/* Tambahan: garis tipis pembatas */
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-col {
+        margin-bottom: 20px;
+    }
+    article {
+        flex-direction: column;
+    }
+    article .thumb img {
+        width: 100%;
+        height: auto;
+    }
+}
